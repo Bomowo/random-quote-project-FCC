@@ -2,7 +2,10 @@ import {useState, useEffect} from 'react'
 
 function App() {
 
-  const [quote, setQuote] = useState({})
+  const [quote, setQuote] = useState({
+    text: '',
+    author: ''
+  })
   
   useEffect(() => {
     fetchNewQuote()
@@ -20,6 +23,8 @@ function App() {
     .catch(error => console.log(error))
   }
 
+  const twitterHref = `https://twitter.com/intent/tweet?text="${quote.text}" -${quote.author}`
+
 
   return (
     <div className="quote-box" id="quote-box">
@@ -30,7 +35,7 @@ function App() {
       </div>
 
       <div className="buttons-container">
-        <button className="twitter-send" id="tweet-quote">Send that quote to twitter</button>
+        <a className="twitter-send" id="tweet-quote" href={twitterHref}>Send that quote to twitter</a>
         <button className="get-new-quote" id="new-quote" onClick={fetchNewQuote}>I want another fire quote</button>
       </div>
 
