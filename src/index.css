@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+}
+.quote-box{
+  background-color: grey;
+  width: 700px;
+  height: 300px;
+}
+.quote-container {
+  padding: 35px;
+  height: 50%;
+}
+.quote {
+  text-align: center;
+}
+.quote-author {
+  text-align: right;
+}
+.buttons-container {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+
+  padding: 35px;
+}
