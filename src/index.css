@@ -56,3 +56,9 @@ button{
   background-color: #93B1A6;
   color: #040D12;
 }
+
+@media (max-width: 750px) {
+  .quote-box{
+    width: 365px;
+  }
+}
