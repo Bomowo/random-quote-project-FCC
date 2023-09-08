@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import {FaArrowRight, FaTwitter} from 'react-icons/fa'
 
 function App() {
 
@@ -30,13 +31,13 @@ function App() {
     <div className="quote-box" id="quote-box">
 
       <div className="quote-container">
-        <h1 className="quote" id="text">{quote && quote.text}</h1>
-        <h2 className="quote-author" id="author">{quote && quote.author}</h2>
+        <h1 className="quote" id="text">&quot;{quote && quote.text}&quot;</h1>
+        <h2 className="quote-author" id="author">- {quote && quote.author}</h2>
       </div>
 
       <div className="buttons-container">
-        <a className="twitter-send" id="tweet-quote" href={twitterHref}>Send that quote to twitter</a>
-        <button className="get-new-quote" id="new-quote" onClick={fetchNewQuote}>I want another fire quote</button>
+        <a className="twitter-send" id="tweet-quote" href={twitterHref}><FaTwitter/></a>
+        <button className="get-new-quote" id="new-quote" onClick={fetchNewQuote}><FaArrowRight/></button>
       </div>
 
     </div>
@@ -44,3 +45,6 @@ function App() {
 }
 
 export default App
+
+
+
